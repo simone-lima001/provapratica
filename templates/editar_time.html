@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Time</title>
+</head>
+<body>
+    <h1>Editar Time</h1>
+    <form method="post" action="/editar-time/{{ time['id'] }}">
+        <input type="text" name="nome" placeholder="Digite o nome do time:" value="{{ time['nome'] }}" required>
+        <input type="text"  name="cidade" id="estado" placeholder="Digite a sua cidade:"  value="{{ time['cidade'] }}" required>
+        <input type="text"  name="estado" id="estado" placeholder="Digite o seu estado:" value="{{ time['estado'] }}" required>
+        <input type="submit" value="Salvar">
+    </form>
+</body>
+</html>

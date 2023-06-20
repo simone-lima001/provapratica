@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listar Times</title>
+</head>
+<body>
+    <h1>Listar Times</h1>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>Nome</th>
+            <th>Cidade</th>
+            <th>Estado</th>
+        </tr>
+        {% for time in times %}
+        <tr>
+            <td>{{ time['id'] }}</td>
+            <td>{{ time['nome'] }}</td>
+            <td>{{ time['cidade'] }}</td>
+            <td>{{ time['estado'] }}</td>
+            <td><a href="/editar-time/{{ time['id'] }}">Editar</a></td>
+            <td><a href="/excluir-time/{{ time['id'] }}">Excluir</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br><a href="/cadastrar_times">Cadastrar Time</a>
+</body>
+</html>
